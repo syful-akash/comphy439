@@ -36,7 +36,7 @@ def lagrange_poly(point, x, f):
 def lagrange_dataset(x,y):
 	'This function generate new Dataset for lagrange interpolation'
 	initial = x[0]
-	dx = float(x[1]-x[0])/10
+	dx = float(x[1]-x[0])/100
 	n_x = []
 	n_y = []
 
@@ -50,7 +50,7 @@ def lagrange_dataset(x,y):
 '''
 This is the begining of the program
 '''
-x = [1,2,6]
+x = [1,3,6]
 y = [1,3,9]
 
 'Calling new dataset from lagrange interpolation'
@@ -61,6 +61,7 @@ print(n_y)
 'Ploting data and interpolated data'
 plt.plot(x,y, 'ko')
 plt.plot(n_x, n_y)
+plt.legend(['data','LI'])
 plt.xlabel('x')
 plt.ylabel('y')
 plt.title('Lagrange Interpolation')
