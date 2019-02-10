@@ -1,8 +1,11 @@
-
+'''Importing builtin python library'''
 import numpy as np
 import matplotlib.pyplot as plt
+'''importing self written python script from current directory'''
 from linear_fit import linear_fit
 from coefficient import coefficient
+
+'''defining main linear least square function'''
 def least_square(x, y, degree):
 
     '''
@@ -24,17 +27,10 @@ def least_square(x, y, degree):
     x_new = []
     x_new, y_new = linear_fit(a_0, a_1, x)
     'this command was written as check purpus'
-    # print(x_new) 
-    # print(y_new)
-    
-    '''
-    Ploting Old data point & best linear fit for 
-    this data points
-    '''
-    plt.title('Least Square Method(Linear Fit)')
-    plt.xlabel('x label')
-    plt.ylabel('y label')
-    plt.plot(x, y, 'ko', label='Data')
-    plt.plot(x_new, y_new, label='Linear Fit')
+   # print(x_new) # this command was written as check purpus
+    # print(y_new) # this command was written as check purpus
+    plt.plot(x, y, 'ko', label='Data') #ploting raw data as black dot
+    plt.plot(x_new, y_new, label='Linear Fit') #ploting linear fit for given data 
     plt.legend()
-    # plt.grid(True)
+    
+    
